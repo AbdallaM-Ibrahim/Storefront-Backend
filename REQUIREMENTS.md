@@ -15,10 +15,10 @@ These are the notes from a meeting with the frontend developer that describe wha
 - Create [token required]
   `POST ${api}/products`
   ```json
-  headers: {
+  "headers": {
     "Authorization": "Bearer " + TOKEN
   },
-  body: {
+  "body": {
     "name": "",
     "price": "",
     "category": ""
@@ -42,7 +42,7 @@ These are the notes from a meeting with the frontend developer that describe wha
   `GET ${api}/users`
 
   ```json
-  headers: {
+  "headers": {
     "Authorization": "Bearer " + TOKEN
   }
   ```
@@ -50,14 +50,17 @@ These are the notes from a meeting with the frontend developer that describe wha
 - Show [token required]
   `GET ${api}/users/:user_id`
   ```json
-  headers: {
+  "headers": {
     "Authorization": "Bearer " + TOKEN
   }
   ```
 - Create [token required]
   `POST ${api}/users`
   ```json
-  body: {
+  "headers": {
+    "Authorization": "Bearer " + TOKEN
+  },
+  "body": {
     "firstName": "",
     "lastName": "",
     "password": ""
@@ -65,7 +68,7 @@ These are the notes from a meeting with the frontend developer that describe wha
   ```
 - Destroy [token required] `{{api}}/users/:id`
   ```json
-  headers: {
+  "headers": {
     "Authorization": "Bearer " + TOKEN
   }
   ```
@@ -74,7 +77,7 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 - Create `{{api}}/orders`
   ```json
-  {
+  "body": {
     "user_id": 1,
     "status": "active"
   }
@@ -85,14 +88,14 @@ These are the notes from a meeting with the frontend developer that describe wha
 - Current Order by user (args: user id)[token required]
   `GET ${api}/users/:user_id/current`
   ```json
-  headers: {
+  "headers": {
     "Authorization": "Bearer " + TOKEN
   }
   ```
 - [OPTIONAL] Completed Orders by user (args: user id)[token required]
   `GET ${api}/users/:user_id/completed`
   ```json
-  headers: {
+  "headers": {
     "Authorization": "Bearer " + TOKEN
   }
   ```
