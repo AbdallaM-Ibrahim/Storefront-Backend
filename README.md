@@ -20,9 +20,9 @@ login into postgres and run this queries
 CREATE DATABASE store_db;
 CREATE DATABASE store_test_db;
 CREATE USER store_user WITH PASSWORD 'password123';
-\ c store_db
+\c store_db
 GRANT ALL PRIVILEGES ON DATABASE store_db TO store_user;
-\ c store_test_db
+\c store_test_db
 GRANT ALL PRIVILEGES ON DATABASE store_test_db TO store_user;
 ```
 exit from postgres `\q`
