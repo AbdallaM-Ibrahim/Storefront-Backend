@@ -74,4 +74,5 @@ npm run prettier
 ## Notes
 - Remember to read the updated version of [REQUIREMENTS.md](REQUIREMENTS.md) file
 - Can use my [postman workspace](https://www.postman.com/supply-technologist-95764904/workspace/42629980-c5f2-4180-a8e8-3a4d08b482e8/ "workspace") for testing
+- there is a logger you can remove its `.use` comment for debugging 
 - 100% feel bad for the delayed submit
