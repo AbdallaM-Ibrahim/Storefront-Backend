@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express'
 import { Order, Status, Store as OrdersDB } from '../models/order'
 import { Order_Product, Store as OP_DB } from '../models/order_product'
+import { authToken } from '../middlewares/auth'
 
 const ordersDB = new OrdersDB()
 const op_DB = new OP_DB()
@@ -102,6 +103,7 @@ const removeProduct = async (req: Request, res: Response): Promise<void> => {
 }
 
 const orderRoutes = (app: express.Application): void => {
+  app.use('/orders', authToken)
   app.get('/orders', index)
   app.get('/orders/:id', show)
   app.post('/orders', create)
